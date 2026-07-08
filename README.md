@@ -33,10 +33,10 @@ RDK X5（地平线——边缘AI计算核心）：视觉识别与推理：部署
           pyserial>=3.5
 
   
-**STM32F103C8T6（意法半导体——底层运动执行核心）：**四足步态解算：运行 几何运动学逆解算法，将空间足端坐标（x,y,z）实时转换为12个关节舵机的目标角度，驱动机械狗实现全向移动、零半径转向及越障。
+STM32F103C8T6（意法半导体——底层运动执行核心）：四足步态解算：运行 几何运动学逆解算法，将空间足端坐标（x,y,z）实时转换为12个关节舵机的目标角度，驱动机械狗实现全向移动、零半径转向及越障。
 软件环境： STM32CubeIDE for VS Code
 
-**ESP32-S3（乐鑫——物联网网关与语音交互核心）：**集成 语音识别（ASR） → DeepSeek 大模型（LLM） → 语音合成（TTS） 全链路。解析大模型返回的 JSON 控制流（区分“交流字符串”与“控制字符串”）：交流内容直接合成语音播报；控制指令通过 UART 串口 转发给以上芯片执行。使用MCP（模型上下文协议）封装功能为标准化 JSON-RPC 2.0 工具，供云端大模型动态调用，实现“意图→工具选择→物理执行”的闭环。
+ESP32-S3（乐鑫——物联网网关与语音交互核心）：集成 语音识别（ASR） → DeepSeek 大模型（LLM） → 语音合成（TTS） 全链路。解析大模型返回的 JSON 控制流（区分“交流字符串”与“控制字符串”）：交流内容直接合成语音播报；控制指令通过 UART 串口 转发给以上芯片执行。使用MCP（模型上下文协议）封装功能为标准化 JSON-RPC 2.0 工具，供云端大模型动态调用，实现“意图→工具选择→物理执行”的闭环。
 
 
 📦 通用依赖（跨平台）
@@ -70,75 +70,7 @@ MCP Server 配置：参见 config/mcp_server.json
 Blinker 物联网平台配置：参见 docs/blinker_setup.md
 
 # 快速入门
-本项目基于 “端-边-云”三层异构架构，需为以下三款核心芯片分别配置开发环境。
 
-1. RDK X5（地平线）——边缘AI计算核心
-
-RDK X5 具备 10 Tops 端侧推理算力与 8核 ARM A55 处理器，负责 YOLOv11 模型推理与 DeepSORT 多目标跟踪。
-
-资源链接
-
-官方文档中心	https://developer.d-robotics.cc/rdk_doc_center/
-
-系统镜像构建工具 (x5-rdk-gen)	https://github.com/D-Robotics/x5-rdk-gen
-
-系统烧录指南	https://d-robotics.github.io/rdk_doc/Quick_start/install_os/rdk_x5/
-
-RDK 套件使用文档	https://developer.d-robotics.cc/rdk_doc
-
-主机编译环境要求：
-
-操作系统：Ubuntu 22.04（推荐与 RDK X5 保持同版本）
-
-必备软件包：
-
-bash
-
-sudo apt update
-
-sudo apt install build-essential make cmake python3-numpy git repo
-
-交叉编译工具链：http://archive.d-robotics.cc/toolchain/
-
-Python 依赖：
-
-bash
-
-pip install ultralytics opencv-python numpy pyserial
-
-部署流程：
-
-将训练好的 .pt 模型转化为 .onnx，再转化为 .mnn 轻量化格式
-
-通过地平线 AI 工具链量化并部署至 BPU
-
-在 RDK X5 上运行推理服务（Python / C++）
-
-2. ESP32-S3（乐鑫）——语音交互与 MCP 网关核心
-
-ESP32-S3 搭载 Xtensa® 32 位 LX7 双核处理器，负责语音采集、MCP Server 运行及云端大模型调度。
-
-官方文档：
-
-资源链接
-
-ESP-IDF 快速入门（通用）	https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/
-
-ESP32-S3 编程指南（v5.3.3）	https://documentation.espressif.com/esp-idf/zh_CN/v5.3.3/esp32s3/
-
-VS Code ESP-IDF 扩展	https://docs.espressif.com/projects/vscode-esp-idf-extension/
-
-推荐开发方式：VS Code + ESP-IDF Extension
-
-安装步骤：
-
-安装 VS Code 后，搜索并安装 ESP-IDF Extension
-
-通过扩展的配置向导，选择 ESP-IDF 版本 v5.3.3，自动下载工具链（GCC、CMake、Ninja）
-
-若使用 Windows，需提前安装 CP210x USB 驱动（串口调试必备）
-
-bash
 # 手动安装 ESP-IDF 备用方案
 git clone --recursive https://github.com/espressif/esp-idf.git
 cd esp-idf
