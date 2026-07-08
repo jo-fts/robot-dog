@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\HardWare -I .\wexcube_sdk --no-multibyte-chars
+-I.\RTE\_Target_1
+-I"D:\keil V5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include"
+-I"D:\keil V5\ARM\CMSIS\Include"
+-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+-o .\objects\stm32f10x_pwr.o --omf_browse .\objects\stm32f10x_pwr.crf --depend .\objects\stm32f10x_pwr.d --feedback ".\Objects\Project.fed" "Library\stm32f10x_pwr.c"
