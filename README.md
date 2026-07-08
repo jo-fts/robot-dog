@@ -44,11 +44,16 @@
 1. RDK X5（地平线）——边缘AI计算核心
 RDK X5 具备 10 Tops 端侧推理算力与 8核 ARM A55 处理器，负责 YOLOv11 模型推理与 DeepSORT 多目标跟踪。
 
-资源	链接
+资源链接
+
 官方文档中心	https://developer.d-robotics.cc/rdk_doc_center/
+
 系统镜像构建工具 (x5-rdk-gen)	https://github.com/D-Robotics/x5-rdk-gen
+
 系统烧录指南	https://d-robotics.github.io/rdk_doc/Quick_start/install_os/rdk_x5/
+
 RDK 套件使用文档	https://developer.d-robotics.cc/rdk_doc
+
 主机编译环境要求：
 
 操作系统：Ubuntu 22.04（推荐与 RDK X5 保持同版本）
@@ -56,14 +61,19 @@ RDK 套件使用文档	https://developer.d-robotics.cc/rdk_doc
 必备软件包：
 
 bash
+
 sudo apt update
+
 sudo apt install build-essential make cmake python3-numpy git repo
+
 交叉编译工具链：http://archive.d-robotics.cc/toolchain/
 
 Python 依赖：
 
 bash
+
 pip install ultralytics opencv-python numpy pyserial
+
 部署流程：
 
 将训练好的 .pt 模型转化为 .onnx，再转化为 .mnn 轻量化格式
@@ -73,14 +83,19 @@ pip install ultralytics opencv-python numpy pyserial
 在 RDK X5 上运行推理服务（Python / C++）
 
 2. ESP32-S3（乐鑫）——语音交互与 MCP 网关核心
+3. 
 ESP32-S3 搭载 Xtensa® 32 位 LX7 双核处理器，负责语音采集、MCP Server 运行及云端大模型调度。
 
 官方文档：
 
-资源	链接
+资源链接
+
 ESP-IDF 快速入门（通用）	https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/
+
 ESP32-S3 编程指南（v5.3.3）	https://documentation.espressif.com/esp-idf/zh_CN/v5.3.3/esp32s3/
+
 VS Code ESP-IDF 扩展	https://docs.espressif.com/projects/vscode-esp-idf-extension/
+
 推荐开发方式：VS Code + ESP-IDF Extension
 
 安装步骤：
