@@ -124,9 +124,9 @@ robot-dog/
 
 ├── Motion control/                              # 运动控制核心
 
-│   ├── stm32_driver/                            # STM32底层驱动
+│   ├── HardWare\PetAction.c                     # 逆解算法
 
-│   │   └── gait_solver/                         # 步态逆解算法
+│   │── HardWare\uart.c                     # 芯片通讯控制
 
 │   └── hal_lib/                                 # 硬件抽象层
 
