@@ -134,6 +134,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 | OLED显示屏(128x64) | 1 | 显示表情与状态 |
 | 电源模块(7.4V锂电池) | 1 | 主电源 |
 | 舵机驱动板 | 1 | 舵机电源管理 |
+| HC-SR04 | 1 | 超声波测距 |
 | 连接线 | 若干 | 电路连接 |
 
 ## 二、引脚分配表
