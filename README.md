@@ -138,6 +138,17 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 
 ## 二、引脚分配表
 
+### RDK引脚分配
+
+
+| 引脚 | 功能 | 连接对象 |
+|------|------|----------|
+| 10 | USART3_RX | STM32 |
+| 11 | USART3_TX  | STM32 |
+| 3V3 | 供电 | 降压模块 |
+| GND | 地线 | 所有组件 |
+
+
 ### STM32F103C8T6引脚分配
 
 | 引脚 | 功能 | 连接对象 |
@@ -150,28 +161,14 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 | PB11 | USART3_RX | RDK模块-TX |
 | GND | 地线 | 所有组件 |
 
-### RDK引脚分配
-
-| 引脚 | 功能 | 连接对象 |
-|------|------|----------|
-| PA0-PA7 | PWM输出 | 舵机1-8 |
-| PB0-PB3 | PWM输出 | 舵机9-12 |
-| PA9 | USART1_TX | ESP32模块-RX |
-| PA10 | USART1_RX | ESP32模块-TX |
-| PB10 | USART3_TX | RDK模块-RX |
-| PB11 | USART3_RX | RDK模块-TX |
-| GND | 地线 | 所有组件 |
 
 ### ESP32引脚分配
 
 | 引脚 | 功能 | 连接对象 |
 |------|------|----------|
 | 21 | USART1_TX | STM32 |
-| 20 | USART1_RX | 舵机9-12 |
-| PA9 | USART1_TX | ESP32模块-RX |
-| PA10 | USART1_RX | ESP32模块-TX |
-| PB10 | USART3_TX | RDK模块-RX |
-| PB11 | USART3_RX | RDK模块-TX |
+| 20 | USART1_RX | STM32 |
+| 3V3 | 供电 | 降压模块 |
 | GND | 地线 | 所有组件 |
 
 ### 舵机编号对应关系
@@ -221,7 +218,6 @@ robot-dog/
 
 # 作品效果
 
-<img width="823" height="438" alt="e" src="https://github.com/user-attachments/assets/62912101-a5b2-4e95-a322-739af2f1b7b6" />
 
 <img width="555" height="740" alt="ssada" src="https://github.com/user-attachments/assets/954de5eb-21d7-4d70-8c94-2dd6a5c8a871" />
 
