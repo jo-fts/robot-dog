@@ -118,19 +118,19 @@ robot-dog/
 
 ├── Mechanical-smart/        # 机械结构设计
 
-│   ├── 3d_models/           # 整机3D打印模型
+│   ├── main\boards\bread-compact-wifi           # ESP32引脚配置
 
-│   └── engineering_drawing/ # 工程图纸与物料清单
+│   └── main/mcp_server.cc                       # MCP协议服务控制
 
-├── Motion control/          # 运动控制核心
+├── Motion control/                              # 运动控制核心
 
-│   ├── stm32_driver/        # STM32底层驱动
+│   ├── stm32_driver/                            # STM32底层驱动
 
-│   │   └── gait_solver/     # 步态逆解算法
+│   │   └── gait_solver/                         # 步态逆解算法
 
-│   └── hal_lib/             # 硬件抽象层
+│   └── hal_lib/                                 # 硬件抽象层
 
-└── tests/                   # 单元与集成测试
+└── fenggezuopin2                                # RDK代码，视觉处理 
 
 
 # Piped stdin also works
