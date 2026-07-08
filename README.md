@@ -115,12 +115,19 @@ J-Link：需从 SEGGER 官网手动下载安装
 # 目录结构
 
 robot-dog/
+
 ├── Mechanical-smart/        # 机械结构设计
+
 │   ├── 3d_models/           # 整机3D打印模型
+
 │   └── engineering_drawing/ # 工程图纸与物料清单
+
 ├── Motion control/          # 运动控制核心
+
 │   ├── stm32_driver/        # STM32底层驱动
+
 │   │   └── gait_solver/     # 步态逆解算法
+
 │   └── hal_lib/             # 硬件抽象层
 
 └── tests/                   # 单元与集成测试
