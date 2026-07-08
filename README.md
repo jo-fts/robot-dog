@@ -116,7 +116,7 @@ J-Link：需从 SEGGER 官网手动下载安装
 
 robot-dog/
 
-├── Mechanical-smart/        # 机械结构设计
+├── Mechanical-smart/                             # 机械结构设计
 
 │   ├── main\boards\bread-compact-wifi           # ESP32引脚配置
 
