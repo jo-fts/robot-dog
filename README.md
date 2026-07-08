@@ -71,45 +71,6 @@ Blinker 物联网平台配置：参见 docs/blinker_setup.md
 
 # 快速入门
 
-# 手动安装 ESP-IDF 备用方案
-git clone --recursive https://github.com/espressif/esp-idf.git
-cd esp-idf
-./install.sh esp32s3
-source export.sh
-
-3. STM32F103C8T6（意法半导体）——底层运动执行核心
-
-STM32F103C8T6 基于 ARM Cortex-M3 内核，负责舵机控制、陀螺仪读取、超声波避障等实时运动任务。
-
-官方文档：
-
-资源链接
-
-STM32Cube for VS Code 产品页	https://www.st.com/stm32cubevscode
-
-STM32Cube for VS Code 安装指南	https://dev.st.com/stm32cube-docs/stm32cubeide-vscode/1.0.1/en/docs/markup/getting_started/installation.html
-
-官方文档入口	https://dev.st.com/stm32cube-docs/stm32cubeide-vscode/latest/en/
-
-官方支持论坛	https://community.st.com/s/topic/0TO3P000001PSCrWAO/stm32-vs-code-extension
-
-推荐开发方式：VS Code + STM32Cube for VS Code 扩展包（官方一站式方案）
-
-安装步骤：
-
-安装 VS Code 后，在扩展市场搜索 STM32，安装由 STMicroelectronics 官方发布的 STM32Cube for VS Code 扩展包（会自动包含 CMake、CubeMX 等工具）
-
-根据使用的调试器提前安装驱动：
-
-ST-Link：可通过扩展自动安装驱动
-
-J-Link：需从 SEGGER 官网手动下载安装
-
-创建工程：点击 VS Code 左侧 STM32Cube 图标 → 新建项目 → 选择芯片 STM32F103C8T6 → 在 Project Manager 中将 Toolchain/IDE 设置为 CMake → 生成代码后自动打开
-
-编译/烧录/调试：点击 VS Code 底部状态栏的 “编译” 按钮，或侧边栏的 “运行和调试” → 选择 STM32Cube 配置
-
-
 
 
 # 目录结构
