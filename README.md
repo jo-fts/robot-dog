@@ -122,7 +122,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 
 # 四足机器人电路连接功能与使用说明
 
-## 一、硬件组件清单
+## 一、主要硬件组件清单
 
 | 组件名称 | 数量 | 用途 |
 |---------|------|------|
@@ -138,7 +138,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 
 ## 二、引脚分配表
 
-### RDK引脚分配
+### RDK部分引脚分配
 
 
 | 引脚 | 功能 | 连接对象 |
@@ -149,7 +149,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 | GND | 地线 | 所有组件 |
 
 
-### STM32F103C8T6引脚分配
+### STM32F103C8T6部分引脚分配
 
 | 引脚 | 功能 | 连接对象 |
 |------|------|----------|
@@ -162,7 +162,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 | GND | 地线 | 所有组件 |
 
 
-### ESP32引脚分配
+### ESP32部分引脚分配
 
 | 引脚 | 功能 | 连接对象 |
 |------|------|----------|
