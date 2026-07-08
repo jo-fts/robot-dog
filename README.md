@@ -41,7 +41,6 @@
 **ESP32-S3（乐鑫——物联网网关与语音交互核心）：**
 集成 语音识别（ASR） → DeepSeek 大模型（LLM） → 语音合成（TTS） 全链路。解析大模型返回的 JSON 控制流（区分“交流字符串”与“控制字符串”）：交流内容直接合成语音播报；控制指令通过 UART 串口 转发给以上芯片执行。使用MCP（模型上下文协议）封装功能为标准化 JSON-RPC 2.0 工具，供云端大模型动态调用，实现“意图→工具选择→物理执行”的闭环。
 
-<img width="823" height="438" alt="e" src="https://github.com/user-attachments/assets/bb19ff13-69d6-423c-8baf-cdb4995f41a3" />
 
 
 
@@ -191,7 +190,8 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 
 ## 三、电路连接图
 
-<img width="1219" height="848" alt="Snipaste_2026-07-08_22-40-59" src="https://github.com/user-attachments/assets/c5989d14-ecbb-48ac-9b07-814922466541" />
+<img width="1219" height="848" alt="Snipaste_2026-07-08_22-40-59" src="https://github.com/user-attachments/assets/9801f67b-799d-4b46-acf2-e821d9c4919c" />
+
 
 
 
@@ -220,5 +220,5 @@ robot-dog/
 # 作品效果
 
 
-<img width="555" height="740" alt="ssada" src="https://github.com/user-attachments/assets/954de5eb-21d7-4d70-8c94-2dd6a5c8a871" />
+<img width="555" height="740" alt="ssada" src="https://github.com/user-attachments/assets/9e1bd60b-9f1b-4b43-8dcf-c458f1de67fe" />
 
