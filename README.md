@@ -74,16 +74,28 @@ Blinker 物联网平台配置：参见 docs/blinker_setup.md
 **环境搭建**
 
 RDK X5（地平线）
+
 RDK X5 是地平线推出的全功能开发板，具备 10Tops 端侧推理算力与 8核 ARM A55 处理能力。开发环境搭建主要参考以下官方资源：
 
+**RDK 官方文档中心**	
 
-RDK 官方文档中心	https://developer.d-robotics.cc/rdk_doc_center/	最新文档入口，包含开发环境搭建、系统镜像定制等完整内容
+https://developer.d-robotics.cc/rdk_doc_center/	
 
-x5-rdk-gen 仓库	https://github.com/D-Robotics/x5-rdk-gen	RDK X5 系统镜像构建工具，README 提供从环境安装到源码编译的完整说明
+最新文档入口，包含开发环境搭建、系统镜像定制等完整内容
 
-系统烧录指南	https://d-robotics.github.io/rdk_doc/Quick_start/install_os/rdk_x5/	包含供电要求（5V/5A）、存储卡准备（≥16GB）、镜像下载与烧录步骤
+x5-rdk-gen 仓库	https://github.com/D-Robotics/x5-rdk-gen	
 
-RDK 套件使用文档	https://developer.d-robotics.cc/rdk_doc	涵盖示例教程运行、应用程序开发、系统镜像定制等内容
+RDK X5 系统镜像构建工具，README 提供从环境安装到源码编译的完整说明
+
+**系统烧录指南**	
+
+https://d-robotics.github.io/rdk_doc/Quick_start/install_os/rdk_x5/	
+
+包含供电要求（5V/5A）、存储卡准备（≥16GB）、镜像下载与烧录步骤
+
+**RDK 套件使用文档**
+
+https://developer.d-robotics.cc/rdk_doc	涵盖示例教程运行、应用程序开发、系统镜像定制等内容
 
 主机编译环境要求：推荐使用 Ubuntu 22.04 操作系统，保持与 RDK X5 相同的系统版本以减少依赖问题。需安装 build-essential、make、cmake、python3-numpy、git、repo 等软件包。交叉编译工具链可从 
 
