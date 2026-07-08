@@ -126,9 +126,9 @@ robot-dog/
 
 │   ├── HardWare\PetAction.c                     # 逆解算法
 
-│   │── HardWare\uart.c                     # 芯片通讯控制
+│   │── HardWare\uart.c                          # 芯片通讯控制
 
-│   └── hal_lib/                                 # 硬件抽象层
+│   └──HardWare\Servo.c                          # 机械狗驱动电路
 
 └── fenggezuopin2                                # RDK代码，视觉处理 
 
