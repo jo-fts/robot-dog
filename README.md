@@ -41,6 +41,9 @@
 **ESP32-S3（乐鑫——物联网网关与语音交互核心）：**
 集成 语音识别（ASR） → DeepSeek 大模型（LLM） → 语音合成（TTS） 全链路。解析大模型返回的 JSON 控制流（区分“交流字符串”与“控制字符串”）：交流内容直接合成语音播报；控制指令通过 UART 串口 转发给以上芯片执行。使用MCP（模型上下文协议）封装功能为标准化 JSON-RPC 2.0 工具，供云端大模型动态调用，实现“意图→工具选择→物理执行”的闭环。
 
+<img width="823" height="438" alt="e" src="https://github.com/user-attachments/assets/bb19ff13-69d6-423c-8baf-cdb4995f41a3" />
+
+
 
 📦 通用依赖（跨平台）
 
@@ -217,4 +220,8 @@ robot-dog/
 
 
 # 作品效果
+
+<img width="823" height="438" alt="e" src="https://github.com/user-attachments/assets/62912101-a5b2-4e95-a322-739af2f1b7b6" />
+
+<img width="555" height="740" alt="ssada" src="https://github.com/user-attachments/assets/954de5eb-21d7-4d70-8c94-2dd6a5c8a871" />
 
