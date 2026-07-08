@@ -70,7 +70,7 @@ MCP Server 配置：参见 config/mcp_server.json
 Blinker 物联网平台配置：参见 docs/blinker_setup.md
 
 # 快速入门
-
+环境搭建
 
 
 # 目录结构
@@ -94,6 +94,5 @@ robot-dog/
 └── fenggezuopin2                                # RDK代码，视觉处理 
 
 
-# Piped stdin also works
-echo "write me a ROS2 topic listener node" | moss
-在TUI内，按Shift+Tab键切换交互模式：
+# 作品效果
+
