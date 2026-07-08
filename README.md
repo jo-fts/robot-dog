@@ -190,36 +190,7 @@ https://www.bilibili.com/video/BV1QfbpzGENy?vd_source=171744127dbde1394af78c445e
 
 ## 三、电路连接图
 
-```
-+---------------------+
-| STM32F103C8T6       |
-|                     |
-|  PA0-7  PWM输出      |-----> 舵机1-8
-|  PB0-3  PWM输出      |-----> 舵机9-12
-|  PB10   USART3_TX    |-----> RDK RX
-|  PB11   USART3_RX    |<----- RDK TX
-|  PB6    I2C1_SCL     |-----> OLED SCL
-|  PB7    I2C1_SDA     |-----> OLED SDA
-|  VCC(3.3V)           |-----> 蓝牙、OLED VCC
-|  GND                 |-----> 所有组件GND
-+---------------------+
-
-+---------------------+
-| 电源模块(7.4V)      |
-|                     |
-| 正极                |-----> 舵机驱动板VCC
-| 正极                |-----> STM32 VIN
-| 负极                |-----> 所有组件GND
-+---------------------+
-
-+---------------------+
-| 舵机驱动板          |
-|                     |
-| VCC(7.4V)           |<----- 电源模块
-| GND                 |-----> 所有组件GND
-| 舵机1-12接口        |<----- 对应舵机
-+---------------------+
-```
+<img width="1219" height="848" alt="Snipaste_2026-07-08_22-40-59" src="https://github.com/user-attachments/assets/c5989d14-ecbb-48ac-9b07-814922466541" />
 
 
 
