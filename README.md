@@ -42,6 +42,7 @@
 本项目基于 “端-边-云”三层异构架构，需为以下三款核心芯片分别配置开发环境。
 
 1. RDK X5（地平线）——边缘AI计算核心
+
 RDK X5 具备 10 Tops 端侧推理算力与 8核 ARM A55 处理器，负责 YOLOv11 模型推理与 DeepSORT 多目标跟踪。
 
 资源链接
@@ -83,7 +84,7 @@ pip install ultralytics opencv-python numpy pyserial
 在 RDK X5 上运行推理服务（Python / C++）
 
 2. ESP32-S3（乐鑫）——语音交互与 MCP 网关核心
-3. 
+
 ESP32-S3 搭载 Xtensa® 32 位 LX7 双核处理器，负责语音采集、MCP Server 运行及云端大模型调度。
 
 官方文档：
@@ -112,16 +113,23 @@ git clone --recursive https://github.com/espressif/esp-idf.git
 cd esp-idf
 ./install.sh esp32s3
 source export.sh
+
 3. STM32F103C8T6（意法半导体）——底层运动执行核心
+
 STM32F103C8T6 基于 ARM Cortex-M3 内核，负责舵机控制、陀螺仪读取、超声波避障等实时运动任务。
 
 官方文档：
 
-资源	链接
+资源链接
+
 STM32Cube for VS Code 产品页	https://www.st.com/stm32cubevscode
+
 STM32Cube for VS Code 安装指南	https://dev.st.com/stm32cube-docs/stm32cubeide-vscode/1.0.1/en/docs/markup/getting_started/installation.html
+
 官方文档入口	https://dev.st.com/stm32cube-docs/stm32cubeide-vscode/latest/en/
+
 官方支持论坛	https://community.st.com/s/topic/0TO3P000001PSCrWAO/stm32-vs-code-extension
+
 推荐开发方式：VS Code + STM32Cube for VS Code 扩展包（官方一站式方案）
 
 安装步骤：
@@ -138,30 +146,36 @@ J-Link：需从 SEGGER 官网手动下载安装
 
 编译/烧录/调试：点击 VS Code 底部状态栏的 “编译” 按钮，或侧边栏的 “运行和调试” → 选择 STM32Cube 配置
 
-备用开发环境（传统方式）：
-
-Keil MDK：https://www.keil.com/download/product/（需手动安装 STM32F1 DFP 芯片支持包）
-
-STM32CubeIDE：https://www.st.com/en/development-tools/stm32cubeide.html（ST 官方免费 IDE）
 
 📦 通用依赖（跨平台）
+
 依赖项	版本/说明
+
 Git	任意版本，用于代码管理
+
 Python 3.8+	模型训练、数据处理、边缘推理脚本
+
 CMake 3.16+	ESP32 与 STM32 构建系统
+
 串口驱动	CP210x / CH340（USB 转串口芯片，视具体开发板而定）
+
 硬件清单	详见 docs/hardware_bom.md
+
 📌 版本信息汇总
-芯片	推荐开发环境	推荐版本
 RDK X5	Ubuntu 22.04 + 地平线 AI 工具链	最新稳定版
+
 ESP32-S3	VS Code + ESP-IDF Extension	ESP-IDF v5.3.3
+
 STM32F103C8T6	VS Code + STM32Cube for VS Code	最新稳定版
+
 🔗 其他环境配置参考
+
 MCP Server 配置：参见 config/mcp_server.json
 
 大模型 API 密钥：在 config/secret_template.json 中填写后重命名为 secret.json（已加入 .gitignore）
 
 Blinker 物联网平台配置：参见 docs/blinker_setup.md
+
 # 目录结构
 moss "review the code structure of this project"
 
